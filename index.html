@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Need to do some SEO / meta work here boy -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
 <title>Skyrim Modding Acronym Guide/Cheat Sheet</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
 
-<link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 
 <style>
-    em.ng-binding {
-        color: red;
+    /* always on scroll bar */
+    html {
+        overflow-y: scroll;
     }
+
+    .navbar {
+        background-color: #bbbbbb;
+    }
+
+    .container {
+        border: solid 1px #eee;
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #eee;
+    }
+
+    span.ng-binding {
+        color: #666666;
+    }
+
 </style>
 
 <script>
@@ -40,8 +66,11 @@
             { acronym: "HUD", fullName: "", url: "", note: "Heads Up Display - Not a mod, just a general term." },
             { acronym: "FNIS", fullName: "Fore's New Idles in Skyrim", url: "http://www.nexusmods.com/skyrim/mods/11811/", note: "" },
             { acronym: "MO", fullName: "Mod Organizer", url: "http://www.nexusmods.com/skyrim/mods/1334", note: "Way better than NMM!" },
-            { acronym: "NMM", fullName: "Nexus Mod Manager", url: "http://www.nexusmods.com/skyrim/mods/modmanager/", note: "MO is a better mod organizing tool." },
-            { acronym: "temp", fullName: "temp", url: "http://", note: "" },
+            { acronym: "NMM", fullName: "Nexus Mod Manager", url: "http://www.nexusmods.com/skyrim/mods/modmanager/", note: "Not as good as MO" },
+            { acronym: "AOS", fullName: "Audio Overhaul for Skyrim", url: "http://www.nexusmods.com/skyrim/mods/43773/", note: "" },
+            { acronym: "EBQO", fullName: "Even Better Quest Objectives", url: "http://www.nexusmods.com/skyrim/mods/32695", note: "" },
+            { acronym: "MCM", fullName: "Mod Configuration Menu", url: "", note: "Component of SkyUI" },
+            { acronym: "SkyProc", fullName: "Skyrim Processor? - For patch creation", url: "https://code.google.com/p/skyproc/", note: "" },
             { acronym: "temp", fullName: "temp", url: "http://", note: "" },
 
             { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
@@ -51,36 +80,93 @@
         //Not needed?
         // ^ assert position at start of the string
         // Ma matches the characters Ma literally (case sensitive)
-        //$scope.filterFunction = function (element) {
-        //    return element.name.match(/^Ma/) ? true : false;
-        //};
+        $scope.filterFunction = function (element) {
+            return element.name.match(/^Ma/) ? true : false;
+        };
 
     });
 </script>
 </head>
 <body ng-app="MyApp">
-    <h1>Skyrim Acronym Guide/Cheat Sheet</h1>
-    <p>
-        Type in the box to search for either an acronym or a full name of a mod.
-    </p>
-    <p>
-        Please send suggestions, feedback, or bug reports to /u/insane0hflex on reddit.
-    </p>
-    <p>
-        Devnotes: maybe use the LOOT skyrim masterlist somehow (gross yaml tho)? https://github.com/loot/skyrim/blob/v0.8/masterlist.yaml
-    </p>
-    <div ng-controller="MyCtrl">
-        
-        <form class="form-inline">
-            <input ng-model="query" type="text" placeholder="Filter by" autofocus>
-        </form>
-        
-        <ul ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
-            <li>
-                <strong>{{mod.acronym}}:</strong> <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a> <em>{{mod.note}}</em>
-            </li>
-        </ul>
-    
+    <!--<nav class="navbar navbar-fixed-top ">
+        <div class="container ">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Skyrim Acronym Cheat Sheet</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="getting-started.html">Getting Started</a></li>
+                    <li><a href="essentials.html">The Essentials</a></li>
+                    <li><a href="more-fallout-4-mods.html">More Fallout 4 Mods</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+
+    <div class="navbar">
+        <h1 style="text-align:center;">Skyrim Acronym Cheat Sheet</h1>
     </div>
+
+    <div class="container">
+        <br />
+        <p>
+            Type in the box to search for either an acronym or a full name of a mod.
+        </p>
+        <p>
+            Please send suggestions, feedback, or bug reports to /u/insane0hflex on reddit.
+        </p>
+        <!--<p>
+            Devnotes: maybe use the LOOT skyrim masterlist somehow (gross yaml tho)? https://github.com/loot/skyrim/blob/v0.8/masterlist.yaml
+        </p>-->
+        <div ng-controller="MyCtrl">
+
+            <form class="form-inline">
+                <input style="width:100%;" ng-model="query" type="text" placeholder="Filter by" autofocus>
+            </form>
+            <br />
+
+
+            <!--<ul ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
+                <li>
+                    <strong>{{mod.acronym}}:</strong> <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a> <em>{{mod.note}}</em>
+                </li>
+            </ul>-->
+
+            <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Acronym</th>
+                        <th>Mod Name</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
+                        <td style="width:20%;">
+                            <strong>{{mod.acronym}}</strong>
+                        </td>
+                        <td style="width:40%;">
+                            <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a>
+                        </td>
+                        <td style="width:40%;">
+                            <span class="noteText">{{mod.note}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
 </body>
 </html>
