@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Skyrim Modding Acronym Guide/Cheat Sheet</title>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+
+<link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+    em.ng-binding {
+        color: red;
+    }
+</style>
+
+<script>
+    var app = angular.module("MyApp", []);
+
+    app.controller("MyCtrl", function ($scope) {
+
+        //Structure of a mod: { acronym, fullName, url, note(optional), maybe? youtubeLink/Icon }
+        $scope.mods = [
+            { acronym: "SKSE", fullName: "Skyrim Script Extender", url: "http://skse.silverlock.org/" },
+            { acronym: "USLEEP", fullName: "Unofficial Skyrim Legendary Edition Patch" },
+            { acronym: "BOSS", fullName: "Better Oblivion Sorting Software", url: "https://loot.github.io/", note: "Obsolete! Use LOOT instead!" },
+            { acronym: "DynDOLOD", fullName: "Dynamic Distant Objects LOD", url: "http://www.nexusmods.com/skyrim/mods/59721/", note: "Highly recommended!"},
+            { acronym: "SkyUI", fullName: "Skyrim User Interface", url: "http://www.nexusmods.com/skyrim/mods/3863"},
+            { acronym: "UKSP", fullName: "Unofficial Skyrim Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "TES5Edit", fullName: "The Elder Scrolls V Edit Tool", url: "http://www.nexusmods.com/skyrim/mods/25859", note: "" },
+            { acronym: "SoS", fullName: "Sounds of Skyrim", url: "http://www.nexusmods.com/skyrim/mods/10886/", note: "" },
+            { acronym: "CoT", fullName: "Climates of Tamriel - Weather - Lighting - Audio", url: "http://www.nexusmods.com/skyrim/mods/17802/", note: "" },
+            { acronym: "EBT", fullName: "Enhanced Blood Textures", url: "http://www.nexusmods.com/skyrim/mods/60", note: "" },
+            { acronym: "iHUD", fullName: "Immersive HUD", url: "http://www.nexusmods.com/skyrim/mods/3222", note: "" },
+            { acronym: "UI", fullName: "", url: "", note: "User Interface - Not a mod, just a general term." },
+            { acronym: "HUD", fullName: "", url: "", note: "Heads Up Display - Not a mod, just a general term." },
+            { acronym: "FNIS", fullName: "Fore's New Idles in Skyrim", url: "http://www.nexusmods.com/skyrim/mods/11811/", note: "" },
+            { acronym: "MO", fullName: "Mod Organizer", url: "http://www.nexusmods.com/skyrim/mods/1334", note: "Way better than NMM!" },
+            { acronym: "NMM", fullName: "Nexus Mod Manager", url: "http://www.nexusmods.com/skyrim/mods/modmanager/", note: "MO is a better mod organizing tool." },
+            { acronym: "temp", fullName: "temp", url: "http://", note: "" },
+            { acronym: "temp", fullName: "temp", url: "http://", note: "" },
+
+            { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
+            //   BACKUP         { acronym: "temp", fullName: "temp", url: "http://", note: "" },
+        ];
+
+        //Not needed?
+        // ^ assert position at start of the string
+        // Ma matches the characters Ma literally (case sensitive)
+        //$scope.filterFunction = function (element) {
+        //    return element.name.match(/^Ma/) ? true : false;
+        //};
+
+    });
+</script>
+</head>
+<body ng-app="MyApp">
+    <h1>Skyrim Acronym Guide/Cheat Sheet</h1>
+    <p>
+        Type in the box to search for either an acronym or a full name of a mod.
+    </p>
+    <p>
+        Please send suggestions, feedback, or bug reports to /u/insane0hflex on reddit.
+    </p>
+    <p>
+        Devnotes: maybe use the LOOT skyrim masterlist somehow (gross yaml tho)? https://github.com/loot/skyrim/blob/v0.8/masterlist.yaml
+    </p>
+    <div ng-controller="MyCtrl">
+        
+        <form class="form-inline">
+            <input ng-model="query" type="text" placeholder="Filter by" autofocus>
+        </form>
+        
+        <ul ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
+            <li>
+                <strong>{{mod.acronym}}:</strong> <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a> <em>{{mod.note}}</em>
+            </li>
+        </ul>
+    
+    </div>
+</body>
+</html>
