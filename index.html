@@ -27,7 +27,9 @@
     }
 
     .navbar {
-        background-color: #bbbbbb;
+        background-color: #777;
+        border-radius: 0px;
+        
     }
 
     .container {
@@ -42,6 +44,14 @@
         color: #666666;
     }
 
+    h1 {
+        text-align: center;
+        font-family: 'Trajan Pro';
+        font-variant: small-caps;
+        color: #eee;
+    }
+
+
 </style>
 
 <script>
@@ -51,12 +61,15 @@
 
         //Structure of a mod: { acronym, fullName, url, note(optional), maybe? youtubeLink/Icon }
         $scope.mods = [
-            { acronym: "SKSE", fullName: "Skyrim Script Extender", url: "http://skse.silverlock.org/" },
+            { acronym: "SKSE", fullName: "Skyrim Script Extender", url: "http://skse.silverlock.org/", note: "" },
             { acronym: "USLEEP", fullName: "Unofficial Skyrim Legendary Edition Patch" },
             { acronym: "BOSS", fullName: "Better Oblivion Sorting Software", url: "https://loot.github.io/", note: "Obsolete! Use LOOT instead!" },
             { acronym: "DynDOLOD", fullName: "Dynamic Distant Objects LOD", url: "http://www.nexusmods.com/skyrim/mods/59721/", note: "Highly recommended!"},
             { acronym: "SkyUI", fullName: "Skyrim User Interface", url: "http://www.nexusmods.com/skyrim/mods/3863"},
-            { acronym: "UKSP", fullName: "Unofficial Skyrim Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "USKP", fullName: "Unofficial Skyrim Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UHFP", fullName: "Unofficial Hearthfire DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UDBP", fullName: "Unofficial Dragonborn DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UDGP", fullName: "Unofficial Dawnguard DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
             { acronym: "TES5Edit", fullName: "The Elder Scrolls V Edit Tool", url: "http://www.nexusmods.com/skyrim/mods/25859", note: "" },
             { acronym: "SoS", fullName: "Sounds of Skyrim", url: "http://www.nexusmods.com/skyrim/mods/10886/", note: "" },
             { acronym: "CoT", fullName: "Climates of Tamriel - Weather - Lighting - Audio", url: "http://www.nexusmods.com/skyrim/mods/17802/", note: "" },
@@ -70,19 +83,24 @@
             { acronym: "AOS", fullName: "Audio Overhaul for Skyrim", url: "http://www.nexusmods.com/skyrim/mods/43773/", note: "" },
             { acronym: "EBQO", fullName: "Even Better Quest Objectives", url: "http://www.nexusmods.com/skyrim/mods/32695", note: "" },
             { acronym: "MCM", fullName: "Mod Configuration Menu", url: "", note: "Component of SkyUI" },
-            { acronym: "SkyProc", fullName: "Skyrim Processor? - For patch creation", url: "https://code.google.com/p/skyproc/", note: "" },
+            { acronym: "SkyProc", fullName: "Skyrim Processor?", url: "https://code.google.com/p/skyproc/", note: "Used to create patches for mods." },
+            { acronym: "AQWMWR", fullName: "A Quality World Map with Roads", url: "http://www.nexusmods.com/skyrim/mods/4929", note: "" },
+            { acronym: "UHRP", fullName: "Unofficial High Resolution Texture DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/31255/", note: "Only download and use if you you are using the Official HD DLC" },
+            { acronym: "ENB", fullName: "Enhanced Natural Bloom? Who knows...", url: "http://enbdev.com/download_mod_tesskyrim.htm", note: "Adds a lot more graphical features/fidelity" },
+            { acronym: "SMIM", fullName: "Static Mesh Improvement Mod", url: "http://www.nexusmods.com/skyrim/mods/8655/", note: "" },
+            { acronym: "RLO", fullName: "Realistic Light Overhaul", url: "http://www.nexusmods.com/skyrim/mods/30450/", note: "" },
+            { acronym: "ELFX", fullName: "Enhanced Lights and FX", url: "http://www.nexusmods.com/skyrim/mods/27043", note: "" },
             { acronym: "temp", fullName: "temp", url: "http://", note: "" },
-
             { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
             //   BACKUP         { acronym: "temp", fullName: "temp", url: "http://", note: "" },
         ];
 
-        //Not needed?
-        // ^ assert position at start of the string
-        // Ma matches the characters Ma literally (case sensitive)
-        $scope.filterFunction = function (element) {
-            return element.name.match(/^Ma/) ? true : false;
-        };
+        ////Not needed?
+        //// ^ assert position at start of the string
+        //// Ma matches the characters Ma literally (case sensitive)
+        //$scope.filterFunction = function (element) {
+        //    return element.name.match(/^Ma/) ? true : false;
+        //};
 
     });
 </script>
@@ -93,7 +111,7 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></spa>n
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -110,7 +128,7 @@
     </nav>-->
 
     <div class="navbar">
-        <h1 style="text-align:center;">Skyrim Acronym Cheat Sheet</h1>
+        <h1 class=""><img src="leftSideDecor.png" height="23" /> Skyrim Acronym Cheat Sheet <img src="rightSideDecor.png" height="23"  /></h1>
     </div>
 
     <div class="container">
@@ -126,8 +144,8 @@
         </p>-->
         <div ng-controller="MyCtrl">
 
-            <form class="form-inline">
-                <input style="width:100%;" ng-model="query" type="text" placeholder="Filter by" autofocus>
+            <form >
+                <input class="form-control" ng-model=" query" type="text" placeholder="Search for an acronym or a mod name" autofocus>
             </form>
             <br />
 
