@@ -120,19 +120,22 @@
             { acronym: "AV", fullName: "Automatic Variants", url: "http://www.nexusmods.com/skyrim/mods/21377/?", note: "" },
             { acronym: "ASH", fullName: "Apachii Sky Hair", url: "http://www.nexusmods.com/skyrim/mods/10168/?", note: "" },
             { acronym: "TRF", fullName: "The Ruffled Feather - Mod Collection", url: "http://www.nexusmods.com/skyrim/mods/13268/?", note: "Mod Collection of SparrowPrince mods" },
+            { acronym: "PCEA", fullName: "PC Exclusive Animation Path", url: "http://www.nexusmods.com/skyrim/mods/14871", note: "" },
+            { acronym: "AFT", fullName: "Amazing Follower Tweaks", url: "http://www.nexusmods.com/skyrim/mods/15524/", note: "" },
+            { acronym: "OCS", fullName: "Open Cities Skyrim", url: "http://www.nexusmods.com/skyrim/mods/8058/?", note: "" },
+            { acronym: "XPMS", fullName: "XP32 Maximum Skeleton", url: "http://www.nexusmods.com/skyrim/mods/26800/", note: "" },
+            { acronym: "XP32", fullName: "XP32 Maximum Skeleton", url: "http://www.nexusmods.com/skyrim/mods/26800/", note: "" },
+            { acronym: "XPMSE", fullName: "XP32 Maximum Skeleton Extended", url: "http://www.nexusmods.com/skyrim/mods/68000", note: "" },
+            { acronym: "WAFR", fullName: "Weapons and Armor Fixes Remade", url: "http://www.nexusmods.com/skyrim/mods/34093", note: "" },
+            { acronym: "CCOR", fullName: "Complete Crafting Overhaul Remade", url: "http://www.nexusmods.com/skyrim/mods/49791", note: "" },
+            { acronym: "BOYD", fullName: "Bring Out Your Dead", url: "http://www.nexusmods.com/skyrim/mods/14178", note: "" },
             { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://", note: "" },
-            { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://", note: "" },
-            { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://", note: "" },
+
+            //Last item
             { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
             //   BACKUP         { acronym: "temp", fullName: "temp", url: "http://", note: "" },
         ];
 
-        ////Not needed?
-        //// ^ assert position at start of the string
-        //// Ma matches the characters Ma literally (case sensitive)
-        //$scope.filterFunction = function (element) {
-        //    return element.name.match(/^Ma/) ? true : false;
-        //};
 
     });
 
@@ -141,27 +144,6 @@
 </script>
 </head>
 <body ng-app="MyApp">
-    <!--<nav class="navbar navbar-fixed-top ">
-        <div class="container ">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></spa>n
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Skyrim Acronym Cheat Sheet</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="getting-started.html">Getting Started</a></li>
-                    <li><a href="essentials.html">The Essentials</a></li>
-                    <li><a href="more-fallout-4-mods.html">More Fallout 4 Mods</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>-->
-
     <div class="navbar">
         <h1 class=""><img src="leftSideDecor.png" height="23" /> Skyrim Acronym Cheat Sheet <img src="rightSideDecor.png" height="23"  /></h1>
     </div>
@@ -217,15 +199,9 @@
         </div>
 
     </div>
-
-
 <script>
-    function lastUpdated() {
-        var lastUpdated = document.lastModified.substr(0,10);
-        $("#lastUpdated").text(lastUpdated);
-    }
-
-    lastUpdated();
+    var lastUpdated = document.lastModified.substr(0,10);
+    $("#lastUpdated").text(lastUpdated);
 </script>
 </body>
 </html>
