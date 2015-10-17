@@ -32,9 +32,6 @@
         
     }
 
-    .container {
-        border: solid 1px #eee;
-    }
 
     .table-striped > tbody > tr:nth-of-type(odd) {
         background-color: #eee;
@@ -138,6 +135,9 @@
         //};
 
     });
+
+
+
 </script>
 </head>
 <body ng-app="MyApp">
@@ -205,11 +205,27 @@
                     </tr>
                 </tbody>
             </table>
+        
+            <hr>
+        
+            <footer style="text-align:center;">
+
+                Last updated: <span id="lastUpdated"></span>
+                <br>
+            </footer>
+
         </div>
 
     </div>
 
 
+<script>
+    function lastUpdated() {
+        var lastUpdated = document.lastModified.substr(0,10);
+        $("#lastUpdated").text(lastUpdated);
+    }
 
+    lastUpdated();
+</script>
 </body>
 </html>
