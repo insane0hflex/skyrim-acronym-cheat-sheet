@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
@@ -62,7 +62,7 @@
         //Structure of a mod: { acronym, fullName, url, note(optional), maybe? youtubeLink/Icon }
         $scope.mods = [
             { acronym: "SKSE", fullName: "Skyrim Script Extender", url: "http://skse.silverlock.org/", note: "" },
-            { acronym: "USLEEP", fullName: "Unofficial Skyrim Legendary Edition Patch" },
+            { acronym: "USLEEP", fullName: "Unofficial Skyrim Legendary Edition Patch", url: "", note: "" },
             { acronym: "BOSS", fullName: "Better Oblivion Sorting Software", url: "https://loot.github.io/", note: "Obsolete! Use LOOT instead!" },
             { acronym: "DynDOLOD", fullName: "Dynamic Distant Objects LOD", url: "http://www.nexusmods.com/skyrim/mods/59721/", note: "Highly recommended!"},
             { acronym: "SkyUI", fullName: "Skyrim User Interface", url: "http://www.nexusmods.com/skyrim/mods/3863"},
@@ -128,8 +128,7 @@
     </nav>-->
 
     <div class="navbar">
-        <!-- <img src="rightSideDecor.png" height="23"  /> -->
-        <h1 class=""> Skyrim Acronym Cheat Sheet </h1>
+        <h1 class=""><img src="leftSideDecor.png" height="23" /> Skyrim Acronym Cheat Sheet <img src="rightSideDecor.png" height="23"  /></h1>
     </div>
 
     <div class="container">
@@ -140,22 +139,12 @@
         <p>
             Please send suggestions, feedback, or bug reports to /u/insane0hflex on reddit.
         </p>
-        <!--<p>
-            Devnotes: maybe use the LOOT skyrim masterlist somehow (gross yaml tho)? https://github.com/loot/skyrim/blob/v0.8/masterlist.yaml
-        </p>-->
         <div ng-controller="MyCtrl">
 
             <form >
                 <input class="form-control" ng-model=" query" type="text" placeholder="Search for an acronym or a mod name" autofocus>
             </form>
             <br />
-
-
-            <!--<ul ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
-                <li>
-                    <strong>{{mod.acronym}}:</strong> <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a> <em>{{mod.note}}</em>
-                </li>
-            </ul>-->
 
             <!-- https://docs.angularjs.org/api/ng/filter/filter -->
 
