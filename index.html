@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Need to do some SEO / meta work here boy -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+<title>Skyrim Modding Acronym Guide/Cheat Sheet</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+<style>
+    /* always on scroll bar */
+    html {
+        overflow-y: scroll;
+    }
+
+    .navbar {
+        background-color: #777;
+        border-radius: 0px;
+        
+    }
+
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #eee;
+    }
+
+    span.ng-binding {
+        color: #666666;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Trajan Pro';
+        font-variant: small-caps;
+        color: #eee;
+    }
+
+
+</style>
+
+<script>
+    var app = angular.module("MyApp", []);
+
+    app.controller("MyCtrl", function ($scope) {
+
+        //Structure of a mod: { acronym, fullName, url, note(optional), maybe? youtubeLink/Icon }
+        $scope.mods = [
+            { acronym: "SKSE", fullName: "Skyrim Script Extender", url: "http://skse.silverlock.org/", note: "" },
+            { acronym: "USLEEP", fullName: "Unofficial Skyrim Legendary Edition Patch", url: "", note: "" },
+            { acronym: "BOSS", fullName: "Better Oblivion Sorting Software", url: "https://loot.github.io/", note: "Obsolete! Use LOOT instead!" },
+            { acronym: "DynDOLOD", fullName: "Dynamic Distant Objects LOD", url: "http://www.nexusmods.com/skyrim/mods/59721/", note: "Highly recommended!"},
+            { acronym: "SkyUI", fullName: "Skyrim User Interface", url: "http://www.nexusmods.com/skyrim/mods/3863"},
+            { acronym: "USKP", fullName: "Unofficial Skyrim Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UHFP", fullName: "Unofficial Hearthfire DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UDBP", fullName: "Unofficial Dragonborn DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "UDGP", fullName: "Unofficial Dawnguard DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/19", note: "" },
+            { acronym: "TES5Edit", fullName: "The Elder Scrolls V Edit Tool", url: "http://www.nexusmods.com/skyrim/mods/25859", note: "" },
+            { acronym: "SoS", fullName: "Sounds of Skyrim", url: "http://www.nexusmods.com/skyrim/mods/10886/", note: "" },
+            { acronym: "CoT", fullName: "Climates of Tamriel - Weather - Lighting - Audio", url: "http://www.nexusmods.com/skyrim/mods/17802/", note: "" },
+            { acronym: "EBT", fullName: "Enhanced Blood Textures", url: "http://www.nexusmods.com/skyrim/mods/60", note: "" },
+            { acronym: "iHUD", fullName: "Immersive HUD", url: "http://www.nexusmods.com/skyrim/mods/3222", note: "" },
+            { acronym: "UI", fullName: "", url: "", note: "User Interface - Not a mod, just a general term." },
+            { acronym: "HUD", fullName: "", url: "", note: "Heads Up Display - Not a mod, just a general term." },
+            { acronym: "FNIS", fullName: "Fore's New Idles in Skyrim", url: "http://www.nexusmods.com/skyrim/mods/11811/", note: "" },
+            { acronym: "MO", fullName: "Mod Organizer", url: "http://www.nexusmods.com/skyrim/mods/1334", note: "Way better than NMM!" },
+            { acronym: "NMM", fullName: "Nexus Mod Manager", url: "http://www.nexusmods.com/skyrim/mods/modmanager/", note: "Not as good as MO" },
+            { acronym: "AOS", fullName: "Audio Overhaul for Skyrim", url: "http://www.nexusmods.com/skyrim/mods/43773/", note: "" },
+            { acronym: "EBQO", fullName: "Even Better Quest Objectives", url: "http://www.nexusmods.com/skyrim/mods/32695", note: "" },
+            { acronym: "MCM", fullName: "Mod Configuration Menu", url: "", note: "Component of SkyUI" },
+            { acronym: "SkyProc", fullName: "Skyrim ReProcesser", url: "https://code.google.com/p/skyproc/", note: "Used to create patches for mods." },
+            { acronym: "AQWMWR", fullName: "A Quality World Map with Roads", url: "http://www.nexusmods.com/skyrim/mods/4929", note: "" },
+            { acronym: "UHRP", fullName: "Unofficial High Resolution Texture DLC Patch", url: "http://www.nexusmods.com/skyrim/mods/31255/", note: "Only download and use if you you are using the Official HD DLC" },
+            { acronym: "ENB", fullName: "Enhanced Natural Bloom? Who knows...", url: "http://enbdev.com/download_mod_tesskyrim.htm", note: "Adds a lot more graphical features/fidelity" },
+            { acronym: "SMIM", fullName: "Static Mesh Improvement Mod", url: "http://www.nexusmods.com/skyrim/mods/8655/", note: "" },
+            { acronym: "RLO", fullName: "Realistic Light Overhaul", url: "http://www.nexusmods.com/skyrim/mods/30450/", note: "" },
+            { acronym: "ELFX", fullName: "Enhanced Lights and FX", url: "http://www.nexusmods.com/skyrim/mods/27043", note: "" },
+            { acronym: "7B", fullName: "SevenBase", url: "http://www.nexusmods.com/skyrim/mods/36992/", note: "" },
+            { acronym: "ADEC", fullName: "Andale EyeCandy", url: "http://www.nexusmods.com/skyrim/mods/5390", note: "" },
+            { acronym: "CBBE ", fullName: "Caliente's Beautiful Bodies Edition", url: "http://www.nexusmods.com/skyrim/mods/2666", note: "" },
+            { acronym: "UNP", fullName: "UNpretend", url: "http://www.nexusmods.com/skyrim/mods/6709", note: "" },
+            { acronym: "UNPB", fullName: "UNpretend Blessed", url: "http://www.nexusmods.com/skyrim/mods/1489", note: "" },
+            { acronym: "RM", fullName: "Race Menu", url: "http://www.nexusmods.com/skyrim/mods/29624/", note: "" },
+            { acronym: "ELE", fullName: "Enhanced Lighting for ENB", url: "http://www.nexusmods.com/skyrim/mods/59733/?", note: "" },
+            { acronym: "ETAC", fullName: "Expanded Towns and Cities", url: "http://www.nexusmods.com/skyrim/mods/13608/?", note: "" },
+            { acronym: "RCRN", fullName: "HDR Lighting and Weather Enhancement", url: "http://www.nexusmods.com/skyrim/mods/1875/?/", note: "" },
+            { acronym: "IW", fullName: "Immersive Weapons", url: "http://www.nexusmods.com/skyrim/mods/27644/?", note: "" },
+            { acronym: "IA", fullName: "Immersive Armors", url: "http://www.nexusmods.com/skyrim/mods/19733/?", note: "" },
+            { acronym: "CoS", fullName: "Cloaks of Skyrim", url: "http://www.nexusmods.com/skyrim/mods/12092/?", note: "" },
+            { acronym: "UFO", fullName: "Ultimate Follower Overhaul", url: "http://www.nexusmods.com/skyrim/mods/14037/?", note: "" },
+            { acronym: "SFO", fullName: "Skyrim FLoral Overhaul", url: "http://www.nexusmods.com/skyrim/mods/141/?", note: "" },
+            { acronym: "SkyRE", fullName: "Skyrim Redone", url: "http://www.nexusmods.com/skyrim/mods/9286/?", note: "" },
+            { acronym: "XCE", fullName: "Xenius Character Enhancement", url: "http://www.nexusmods.com/skyrim/mods/2356/?", note: "" },
+            { acronym: "SSME", fullName: "Skyrim Startup Memory Editor", url: "http://www.nexusmods.com/skyrim/mods/50305/?", note: "" },
+            { acronym: "CTD", fullName: "", url: "", note: "Crash to Desktop - not a mod, just general term." },
+            { acronym: "EC", fullName: "Enhanced Camera", url: "http://www.nexusmods.com/skyrim/mods/57859/?", note: "Get this mod now." },
+            { acronym: "CWO", fullName: "Civil War Overhaul", url: "http://www.nexusmods.com/skyrim/mods/37216/?", note: "" },
+            { acronym: "OBIS", fullName: "Organized Bandits in Skyrim", url: "http://www.nexusmods.com/skyrim/mods/31264/?", note: "" },
+            { acronym: "MTWWO", fullName: "Moonlight Tales - Werewolf and Werebear Overhaul", url: "http://www.nexusmods.com/skyrim/mods/35470/?", note: "" },
+            { acronym: "PM", fullName: "Perkus Maximus", url: "http://www.nexusmods.com/skyrim/mods/59849/?", note: "" },
+            { acronym: "BVFE", fullName: "Better Vampire Fangs and Eyes", url: "http://www.nexusmods.com/skyrim/mods/38829/?", note: "" },
+            { acronym: "ASIS", fullName: "Automatic Spells Incresed Spawns", url: "http://www.nexusmods.com/skyrim/mods/18436/?", note: "" },
+            { acronym: "STEP", fullName: "Skyrim Total Enhancement Project", url: "http://www.nexusmods.com/skyrim/mods/11/?", note: "" },
+            { acronym: "CC", fullName: "Customizable Camera", url: "http://www.nexusmods.com/skyrim/mods/37347/?", note: "" },
+            { acronym: "SUM", fullName: "SkyProc Unified Manager", url: "http://www.nexusmods.com/skyrim/mods/29865/?", note: "" },
+            { acronym: "BFT", fullName: "Better Fast Travel", url: "http://www.nexusmods.com/skyrim/mods/15508/?", note: "" },
+            { acronym: "CFTO", fullName: "Complete Fast Travel Overhaul", url: "http://www.nexusmods.com/skyrim/mods/68221/?", note: "" },
+            { acronym: "AV", fullName: "Automatic Variants", url: "http://www.nexusmods.com/skyrim/mods/21377/?", note: "" },
+            { acronym: "ASH", fullName: "Apachii Sky Hair", url: "http://www.nexusmods.com/skyrim/mods/10168/?", note: "" },
+            { acronym: "TRF", fullName: "The Ruffled Feather - Mod Collection", url: "http://www.nexusmods.com/skyrim/mods/13268/?", note: "Mod Collection of SparrowPrince mods" },
+            { acronym: "PCEA", fullName: "PC Exclusive Animation Path", url: "http://www.nexusmods.com/skyrim/mods/14871", note: "" },
+            { acronym: "AFT", fullName: "Amazing Follower Tweaks", url: "http://www.nexusmods.com/skyrim/mods/15524/", note: "" },
+            { acronym: "OCS", fullName: "Open Cities Skyrim", url: "http://www.nexusmods.com/skyrim/mods/8058/?", note: "" },
+            { acronym: "XPMS", fullName: "XP32 Maximum Skeleton", url: "http://www.nexusmods.com/skyrim/mods/26800/", note: "" },
+            { acronym: "XP32", fullName: "XP32 Maximum Skeleton", url: "http://www.nexusmods.com/skyrim/mods/26800/", note: "" },
+            { acronym: "XPMSE", fullName: "XP32 Maximum Skeleton Extended", url: "http://www.nexusmods.com/skyrim/mods/68000", note: "" },
+            { acronym: "WAFR", fullName: "Weapons and Armor Fixes Remade", url: "http://www.nexusmods.com/skyrim/mods/34093", note: "" },
+            { acronym: "CCOR", fullName: "Complete Crafting Overhaul Remade", url: "http://www.nexusmods.com/skyrim/mods/49791", note: "" },
+            { acronym: "BOYD", fullName: "Bring Out Your Dead", url: "http://www.nexusmods.com/skyrim/mods/14178", note: "" },
+            { acronym: "ILS", fullName: "", url: "", note: "Infinite loading screen - not a mod, just a general term" },
+            { acronym: "CACO", fullName: "Complete Alchemy and Cooking Overhaul", url: "http://www.nexusmods.com/skyrim/mods/69306/?", note: "" },
+            { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://", note: "" },
+
+            //Last item
+            { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
+            //   BACKUP         { acronym: "temp", fullName: "temp", url: "http://", note: "" },
+        ];
+
+
+    });
+
+
+
+</script>
+</head>
+<body ng-app="MyApp">
+    <div class="navbar">
+        <h1 class=""><img src="leftSideDecor.png" height="23" /> Skyrim Acronym Cheat Sheet <img src="rightSideDecor.png" height="23"  /></h1>
+    </div>
+
+    <div class="container">
+        <br />
+        <p>
+            Type in the box to search for either an acronym or a full name of a mod.
+        </p>
+        <p>
+            Please send suggestions, feedback, or bug reports to /u/insane0hflex on reddit.
+        </p>
+        <div ng-controller="MyCtrl">
+
+            <form >
+                <input class="form-control" ng-model=" query" type="text" placeholder="Search for an acronym or a mod name" autofocus>
+            </form>
+            <br />
+
+            <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Acronym</th>
+                        <th>Mod Name</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="mod in mods | filter:query | orderBy: 'acronym' ">
+                        <td style="width:20%;">
+                            <strong>{{mod.acronym}}</strong>
+                        </td>
+                        <td style="width:40%;">
+                            <a href="{{mod.url}}" target="_blank">{{mod.fullName}}</a>
+                        </td>
+                        <td style="width:40%;">
+                            <span class="noteText">{{mod.note}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <hr>
+        
+            <footer style="text-align:center;">
+
+                Last updated: <span id="lastUpdated"></span>
+                <br>
+            </footer>
+
+        </div>
+
+    </div>
+<script>
+    var lastUpdated = document.lastModified.substr(0,10);
+    $("#lastUpdated").text(lastUpdated);
+</script>
+</body>
+</html>
