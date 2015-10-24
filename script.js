@@ -207,7 +207,8 @@
         { acronym: "WoTE", fullName: "Weapons of the Third Era", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
         { acronym: "WoW", fullName: "Wonders of Weather", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
         { acronym: "Your Own Thoughts", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
-        //{ acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
+        { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
+        { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
 
         //Last item
         { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
@@ -218,7 +219,6 @@
 
   }
 
-  var lastUpdated = document.lastModified.substr(0,10);
-  document.getElementById("lastUpdated").innerHTML = lastUpdated;
+  document.getElementById("lastUpdated").innerHTML = document.lastModified.substr(0,10);
 
 }());
