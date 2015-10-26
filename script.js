@@ -205,7 +205,7 @@
         { acronym: "WIC", fullName: "Winter is Coming", url: "http://www.nexusmods.com/skyrim/mods/13486", note: "" },
         { acronym: "WoTE", fullName: "Weapons of the Third Era", url: "http://www.nexusmods.com/skyrim/mods/3871", note: "" },
         { acronym: "WoW", fullName: "Wonders of Weather", url: "http://www.nexusmods.com/skyrim/mods/64941", note: "" },
-        { acronym: "Your Own Thoughts", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/50349", note: "" },
+        { acronym: "YoT", fullName: "Your Own Thoughts", url: "http://www.nexusmods.com/skyrim/mods/50349", note: "" },
         // { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
 
         //Last item
