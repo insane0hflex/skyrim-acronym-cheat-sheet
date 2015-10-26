@@ -7,4 +7,6 @@ Created to help new modders or returning modders that forgot what acronyms stand
 
 Check it out!
 
+Thanks to anballard for refactoring/angularjs help.
+
 https://insane0hflex.github.io/skyrim-acronym-cheat-sheet/
