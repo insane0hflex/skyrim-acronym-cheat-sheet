@@ -91,6 +91,7 @@
         { acronym: "AMT", fullName: "A Matter of Time", url: "http:://www.nexusmods.com/skyrim/mods/44091/", note: "" },
         { acronym: "AQWM", fullName: "A Quality World Map With Roads", url: "http://www.nexusmods.com/skyrim/mods/4929", note: "(same mod as AQWMWR)" },
         { acronym: "ASLAL ", fullName: "Alternate Start Live Another Life", url: "http://www.nexusmods.com/skyrim/mods/9557/", note: "" },
+        { acronym: "LAL ", fullName: "Alternate Start Live Another Life", url: "http://www.nexusmods.com/skyrim/mods/9557/", note: "" },
         { acronym: "BDC", fullName: " Better Dialogue Controls", url: "http://www.nexusmods.com/skyrim/mods/27371", note: "See also BMC" },
         { acronym: "BMC", fullName: "Better MessageBox Controls", url: "http://www.nexusmods.com/skyrim/mods/28170/", note: "See Also BDC" },
         { acronym: "BMBC", fullName: "Better MessageBox Controls", url: "http://www.nexusmods.com/skyrim/mods/28170/", note: "" },
@@ -180,6 +181,7 @@
         { acronym: "SMC", fullName: "Skyrim Mod Combiner", url: "http://www.nexusmods.com/skyrim/mods/51467", note: "" },
         { acronym: "SMO", fullName: "Simple Magic Overhaul", url: "http://www.nexusmods.com/skyrim/mods/58051", note: "" },
         { acronym: "SoS", fullName: "Seasons of Skyrim", url: "http://www.nexusmods.com/skyrim/mods/23812", note: "" },
+        { acronym: "SoS", fullName: "Schlongs of Skyrim", url: "https://www.google.com/search?btnG=1&pws=0&q=sos+skyrim", note: "... others requested it added..." },
         { acronym: "SoT", fullName: "Sands of Time", url: "http://www.nexusmods.com/skyrim/mods/12452", note: "" },
         { acronym: "SPERG ", fullName: "Skyrim Perk Enhancements and Rebalanced Gameplay", url: "http://www.nexusmods.com/skyrim/mods/24445", note: "" },
         { acronym: "SPO", fullName: "Skyrim Project Optimization", url: "http://www.nexusmods.com/skyrim/mods/32505", note: "" },
@@ -206,11 +208,11 @@
         { acronym: "WoTE", fullName: "Weapons of the Third Era", url: "http://www.nexusmods.com/skyrim/mods/3871", note: "" },
         { acronym: "WoW", fullName: "Wonders of Weather", url: "http://www.nexusmods.com/skyrim/mods/64941", note: "" },
         { acronym: "YoT", fullName: "Your Own Thoughts", url: "http://www.nexusmods.com/skyrim/mods/50349", note: "" },
+        { acronym: "SSIRT", fullName: "Skyrim Skill Interface Re-Texture", url: "http://www.nexusmods.com/skyrim/mods/62238/", note: "" },
         // { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
 
         //Last item
         { acronym: "LOOT", fullName: "Load Order Optimization Tool", url: "https://loot.github.io/" }
-        // backup { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
     ];
 
     vm.mods = $filter("orderBy")(vm.mods, "acronym");
