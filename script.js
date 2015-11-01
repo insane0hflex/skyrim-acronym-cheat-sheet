@@ -209,6 +209,9 @@
         { acronym: "WoW", fullName: "Wonders of Weather", url: "http://www.nexusmods.com/skyrim/mods/64941", note: "" },
         { acronym: "YoT", fullName: "Your Own Thoughts", url: "http://www.nexusmods.com/skyrim/mods/50349", note: "" },
         { acronym: "SSIRT", fullName: "Skyrim Skill Interface Re-Texture", url: "http://www.nexusmods.com/skyrim/mods/62238/", note: "" },
+        { acronym: "WZ", fullName: "WARZONES: Civil Unrest", url: "http://www.nexusmods.com/skyrim/mods/9494/?", note: "WZ, WZ15, WZ2015" },
+        { acronym: "WZAA", fullName: "WARZONES = DLC : Assault Attack", url: "http://www.nexusmods.com/skyrim/mods/71011/?", note: "" },
+        { acronym: "CLUX", fullName: "Claralux", url: "http://www.nexusmods.com/skyrim/mods/17605/?", note: "" },
         // { acronym: "zzzplaceholder", fullName: "placeholder", url: "http://www.nexusmods.com/skyrim/mods/", note: "" },
 
         //Last item
